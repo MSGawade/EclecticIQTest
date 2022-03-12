@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <RunConfiguration>
+    <!-- 0 = As many processes as possible, limited by number of cores on machine, 1 = Sequential (1 process), 2-> Given number of processes up to limit by number of cores on machine-->
+    <MaxCpuCount>0</MaxCpuCount>
+  </RunConfiguration>
+
+
+  <TestRunParameters>
+  <!-- WebDriver supported values: Chrome, Firefox, Edge, InternetExplorer, or RemoteWebDriver -->
+    <Parameter name="WebDriver" value="chrome"/>
+    <Parameter name="ApiUrl" value="https://mystifying-beaver-ee03b5.netlify.app/"/>
+  </TestRunParameters>
+
+  <!-- MSTest adapter -->
+  <MSTest>
+    <MapInconclusiveToFailed>True</MapInconclusiveToFailed>
+    <CaptureTraceOutput>false</CaptureTraceOutput>
+    <DeleteDeploymentDirectoryAfterTestRunIsComplete>False</DeleteDeploymentDirectoryAfterTestRunIsComplete>
+    <DeploymentEnabled>True</DeploymentEnabled>
+    <DeploymentItem filename="" />
+
+    <!-- Uncomment and update path for assembly resolution  -->
+    <AssemblyResolution>   
+      
+   </AssemblyResolution>
+  </MSTest>
+</RunSettings>
