@@ -77,15 +77,16 @@ namespace TestProject1
                     int count = noOfRows.Count;
                 
                     IWebElement row = driver.FindElement(By.XPath("//div[@class='table-row']"));
-
                     dataToBeVerified = row.Text;
-                    //Verify the values
+
+                    //Verify name, cases, impact score and complexity
                     if (dataToBeVerified.Contains(name[i]) && dataToBeVerified.Contains(numberOfCases[i]) && dataToBeVerified.Contains(averageImpactScore[i]) && dataToBeVerified.Contains(complexity[i]))
                     {
                         Assert.IsTrue(true, "displayed");
                     }
                     else
                     {
+                        //failure stack trace
                         Assert.IsTrue(false);
                     }
                 }
@@ -94,7 +95,7 @@ namespace TestProject1
             }
             catch(Exception e)
             {
-                Assert.Fail();
+                Assert.Fail(e.Message);
             }
 
         }
@@ -126,12 +127,27 @@ namespace TestProject1
                 {
                     for (int i = 0; i < complexityCount.Count; i++)
                     {
+                        //get the name
                         IWebElement names = driver.FindElement(By.XPath("//div[text()='" + name[i] + "']"));
-                        IWebElement cases = driver.FindElement(By.XPath("//div[text()='" + numberOfCases[i] + "']"));
-                        IWebElement impactScore = driver.FindElement(By.XPath("//div[text()='" + averageImpactScore[i] + "']"));
+                        string actualName = names.Text;
 
-                        //validate name, case and impact score is present in table
-                        Assert.IsTrue(names.Displayed && cases.Displayed && impactScore.Displayed);
+                        //get the number of cases associated with the name
+                        IWebElement cases = driver.FindElement(By.XPath("//div[text()='" + name[i] + "']//following-sibling::div[text()='" + numberOfCases[i] + "']"));
+                        string actualCases = cases.Text;
+
+                        //get the average impact score associated with name
+                        IWebElement impactScore = driver.FindElement(By.XPath("//div[text()='" + name[i] + "']//following-sibling::div[text()='" + averageImpactScore[i] + "']"));
+                        string actualImpactScore = impactScore.Text;
+
+                        //validate name, cases and impact score is present in the table
+                        if(actualName==name[i] && actualCases== numberOfCases[i] && actualImpactScore== averageImpactScore[i])
+                        {
+                            Assert.IsTrue(true, "Data validated");
+                        }
+                        else
+                        {
+                            Assert.IsTrue(false, "Data Mismatch");
+                        }
 
                     }
                 }
@@ -144,7 +160,8 @@ namespace TestProject1
             }
             catch (Exception e)
             {
-                Assert.Fail();
+                //failure stack trace
+                Assert.Fail(e.Message);
             }
 
         }
@@ -176,12 +193,27 @@ namespace TestProject1
                 {
                     for (int i = 0; i < complexityCount.Count; i++)
                     {
+                        //get the name
                         IWebElement names = driver.FindElement(By.XPath("//div[text()='" + name[i] + "']"));
-                        IWebElement cases = driver.FindElement(By.XPath("//div[text()='" + numberOfCases[i] + "']"));
-                        IWebElement impactScore = driver.FindElement(By.XPath("//div[text()='" + averageImpactScore[i] + "']"));
+                        string actualName = names.Text;
 
-                        //validate name, case and impact score is present in table
-                        Assert.IsTrue(names.Displayed && cases.Displayed && impactScore.Displayed);
+                        //get the number of cases associated with the name
+                        IWebElement cases = driver.FindElement(By.XPath("//div[text()='" + name[i] + "']//following-sibling::div[text()='" + numberOfCases[i] + "']"));
+                        string actualCases = cases.Text;
+
+                        //get the average impact score associated with name
+                        IWebElement impactScore = driver.FindElement(By.XPath("//div[text()='" + name[i] + "']//following-sibling::div[text()='" + averageImpactScore[i] + "']"));
+                        string actualImpactScore = impactScore.Text;
+
+                        //validate name, cases and impact score is present in the table
+                        if (actualName == name[i] && actualCases == numberOfCases[i] && actualImpactScore == averageImpactScore[i])
+                        {
+                            Assert.IsTrue(true, "Data validated");
+                        }
+                        else
+                        {
+                            Assert.IsTrue(false, "Data Mismatch");
+                        }
 
                     }
                 }
@@ -194,7 +226,8 @@ namespace TestProject1
             }
             catch (Exception e)
             {
-                Assert.Fail();
+                //failure stack trace
+                Assert.Fail(e.Message);
             }
 
         }
@@ -225,12 +258,27 @@ namespace TestProject1
                 {
                     for (int i = 0; i < complexityCount.Count; i++)
                     {
+                        //get the name
                         IWebElement names = driver.FindElement(By.XPath("//div[text()='" + name[i] + "']"));
-                        IWebElement cases = driver.FindElement(By.XPath("//div[text()='" + numberOfCases[i] + "']"));
-                        IWebElement impactScore = driver.FindElement(By.XPath("//div[text()='" + averageImpactScore[i] + "']"));
+                        string actualName = names.Text;
 
-                        //validate name, case and impact score is present in table
-                        Assert.IsTrue(names.Displayed && cases.Displayed && impactScore.Displayed);
+                        //get the number of cases associated with the name
+                        IWebElement cases = driver.FindElement(By.XPath("//div[text()='" + name[i] + "']//following-sibling::div[text()='" + numberOfCases[i] + "']"));
+                        string actualCases = cases.Text;
+
+                        //get the average impact score associated with name
+                        IWebElement impactScore = driver.FindElement(By.XPath("//div[text()='" + name[i] + "']//following-sibling::div[text()='" + averageImpactScore[i] + "']"));
+                        string actualImpactScore = impactScore.Text;
+
+                        //validate name, cases and impact score is present in the table
+                        if (actualName == name[i] && actualCases == numberOfCases[i] && actualImpactScore == averageImpactScore[i])
+                        {
+                            Assert.IsTrue(true, "Data validated");
+                        }
+                        else
+                        {
+                            Assert.IsTrue(false, "Data Mismatch");
+                        }
 
                     }
                 }
@@ -243,7 +291,8 @@ namespace TestProject1
             }
             catch (Exception e)
             {
-                Assert.Fail();
+                //failure stack trace
+                Assert.Fail(e.Message);
             }
 
         }

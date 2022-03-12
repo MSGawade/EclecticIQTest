@@ -99,4 +99,3 @@ C:\Users\gawadm.ASIA-PACIFIC\Desktop\TestProjectEclecticIQ\TestProject1\obj\Debu
 C:\Users\gawadm.ASIA-PACIFIC\Desktop\TestProjectEclecticIQ\TestProject1\bin\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
 C:\Users\gawadm.ASIA-PACIFIC\Desktop\TestProjectEclecticIQ\TestProject1\obj\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
 C:\Users\gawadm.ASIA-PACIFIC\Desktop\TestProjectEclecticIQ\TestProject1\obj\Debug\netcoreapp3.1\TestProject1.csproj.ResolveComReference.cache
-C:\Users\gawadm.ASIA-PACIFIC\Desktop\TestProjectEclecticIQ\TestProject1\obj\Debug\netcoreapp3.1\TestProject1.csproj.AssemblyReference.cache
