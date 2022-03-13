@@ -638,6 +638,12 @@
           "lib/netstandard2.0/WebDriver.dll": {}
         }
       },
+      "Selenium.WebDriver.ChromeDriver/99.0.4844.5100": {
+        "type": "package",
+        "build": {
+          "build/Selenium.WebDriver.ChromeDriver.targets": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2759,12 +2765,13 @@
       ]
     },
     "Newtonsoft.Json/10.0.3": {
-      "sha512": "wBM7i7i3U2WX0ecor4zdVGvgrwFUjuigBoHKiL+nH39fCOpCPjBY3RDqJM32edvdyTAVdjzlccHsg41+/+zpSA==",
+      "sha512": "hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
       "type": "package",
       "path": "newtonsoft.json/10.0.3",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.md",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
@@ -3064,6 +3071,24 @@
         "lib/netstandard2.0/WebDriver.xml",
         "selenium.webdriver.3.141.0.nupkg.sha512",
         "selenium.webdriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriver.ChromeDriver/99.0.4844.5100": {
+      "sha512": "021uEuHHgaZ9X2oSCaClBun+azybXg5lw/Pq79fc3D98X0oEpHPuXRTRthxzmqTwH6CGnRNfTvHMZ9xdvHDLzQ==",
+      "type": "package",
+      "path": "selenium.webdriver.chromedriver/99.0.4844.5100",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/DefinePropertiesChromeDriver.targets",
+        "build/Selenium.WebDriver.ChromeDriver.targets",
+        "driver/linux64/chromedriver",
+        "driver/mac64/chromedriver",
+        "driver/win32/chromedriver.exe",
+        "nupkg-icon.png",
+        "selenium.webdriver.chromedriver.99.0.4844.5100.nupkg.sha512",
+        "selenium.webdriver.chromedriver.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -6576,23 +6601,25 @@
       "Microsoft.NET.Test.Sdk >= 16.9.4",
       "Selenium.Support >= 3.141.0",
       "Selenium.WebDriver >= 3.141.0",
+      "Selenium.WebDriver.ChromeDriver >= 99.0.4844.5100",
+      "System.Collections.NonGeneric >= 4.3.0",
       "coverlet.collector >= 3.0.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gawadm.ASIA-PACIFIC\\.nuget\\packages\\": {}
+    "C:\\Users\\gawadm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gawadm.ASIA-PACIFIC\\Desktop\\TestProjectEclecticIQ\\TestProject1\\TestProject1.csproj",
+      "projectUniqueName": "C:\\Users\\gawadm\\Desktop\\clone\\EclecticIQTest\\TestProject1\\TestProject1.csproj",
       "projectName": "TestProject1",
-      "projectPath": "C:\\Users\\gawadm.ASIA-PACIFIC\\Desktop\\TestProjectEclecticIQ\\TestProject1\\TestProject1.csproj",
-      "packagesPath": "C:\\Users\\gawadm.ASIA-PACIFIC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gawadm.ASIA-PACIFIC\\Desktop\\TestProjectEclecticIQ\\TestProject1\\obj\\",
+      "projectPath": "C:\\Users\\gawadm\\Desktop\\clone\\EclecticIQTest\\TestProject1\\TestProject1.csproj",
+      "packagesPath": "C:\\Users\\gawadm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gawadm\\Desktop\\clone\\EclecticIQTest\\TestProject1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\gawadm.ASIA-PACIFIC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gawadm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6600,8 +6627,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://dcsartifacts.dell.com/artifactory/api/nuget/nuget-local": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -6639,6 +6665,14 @@
             "target": "Package",
             "version": "[3.141.0, )"
           },
+          "Selenium.WebDriver.ChromeDriver": {
+            "target": "Package",
+            "version": "[99.0.4844.5100, )"
+          },
+          "System.Collections.NonGeneric": {
+            "target": "Package",
+            "version": "[4.3.0, )"
+          },
           "coverlet.collector": {
             "target": "Package",
             "version": "[3.0.2, )"
@@ -6659,7 +6693,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.212\\RuntimeIdentifierGraph.json"
       }
     }
   }
